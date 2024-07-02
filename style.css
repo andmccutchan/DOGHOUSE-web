@@ -1,0 +1,145 @@
+@import url('/resources/background-pattern.css');
+@import url('/resources/impact-label-font-face.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 25px;
+    font-family: 'Impact Label', sans-serif;
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    z-index: 999;
+    margin-bottom: 4rem;
+}
+
+    header .logo-container {
+        width: 30%;
+    }
+
+    #header-logo {
+        width: 90%;
+    }
+
+    nav {
+        width: 70%;
+        display: flex;
+    }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1.8rem;
+            color: black;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-links li {
+            position: relative;
+            padding: 20px 3rem;
+        }
+
+        .nav-links li:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            border-right: 1px solid #E7E7E7;
+        }
+
+/* Main content */
+
+.column {
+    padding: 10px;
+}
+
+.left {
+    flex: 1;
+    font-family: 'Impact Label Reversed', sans-serif;
+}
+    .left .date, h2 {
+        font-family: 'Impact Label', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .left .show-box {
+        text-align: center;
+        background-color: rgba(211, 211, 211, 0.5);
+        padding: 5px 10px;
+    }
+
+    .left .show-box li {
+        padding: 10px 0;
+    }
+
+.middle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 0 50px;
+}
+
+.right {
+    flex: 1;
+}
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;  
+        height: 500px; 
+        background: linear-gradient(#FFAA33, #FF5F1F);
+        border-radius: 50%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+        .circle button {
+            width: 30%;
+            height: 10%;
+            font-size: 1.4rem;
+            font-family: 'Impact Label Reversed';
+            background-color: #fff;
+            border: none;
+        }
+
+        .circle img {
+            width: 80%; /* Ensure the image fills the circle */
+            height: auto; /* Maintain aspect ratio */
+        }

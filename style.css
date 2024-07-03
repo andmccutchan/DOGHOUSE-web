@@ -104,7 +104,12 @@ header {
     .left a {
         text-decoration: none;
         color: black;
+        transition: all 0.2s;
     }
+
+        .left a:hover {
+            font-size: 1.5rem;
+        }
 
     .left .show-box {
         background-color: rgba(211, 211, 211, 0.5);
@@ -141,12 +146,12 @@ header {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);
-    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+    transform: perspective(1000px) rotateX(0) rotateY(0);
     transition: transform 0.3s;
 }
 
 .circle:hover {
-    transform: perspective(1000px) rotateX(0) rotateY(0);
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
 }
 
         .circle button {
@@ -191,10 +196,17 @@ header {
 .gallery-link img {
     width: 80%; 
     margin: 0 auto; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
 .gallery-link a {
     text-align: center;
+    
+}
+
+.gallery-link img:hover {
+    transform: rotateX(10deg) rotateY(10deg);
 }
         
 

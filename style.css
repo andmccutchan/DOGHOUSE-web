@@ -34,15 +34,22 @@ header {
     width: 100%;
     z-index: 999;
     margin-bottom: 4rem;
+    display: flex;
+    justify-content: center; /* Center items horizontally within the header */
 }
 
-    header .logo-container {
-        width: 30%;
-    }
+.logo-container {
+    width: 30%;
+    display: flex;
+    justify-content: center; /* Center items horizontally within the container */
+    align-items: center; /* Center items vertically within the container */
+}
 
-    #header-logo {
-        width: 90%;
-    }
+.logo-container #header-logo {
+    width: 90%;
+    height: auto;
+}
+  
 
     nav {
         width: 70%;
@@ -53,7 +60,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -82,8 +89,9 @@ header {
             border-right: 1px solid #E7E7E7;
         }
 
-/* Main content */
 
+/* ----------------------------------------- */
+/* BODY STRUCTURE */
 .column {
     padding: 10px;
 }
@@ -136,6 +144,10 @@ header {
 .right {
     flex: 1;
 }
+
+
+/* ------------------------------------ */
+/* CENTER CIRCLE */
 .circle {
     display: flex;
     justify-content: center;
@@ -169,6 +181,9 @@ header {
         }
 
 
+
+/* ---------------------------------------------------- */
+/* PHOTO GALLERY CONTENT */
 .gallery-container {
     display: flex;
     flex-direction: column;
@@ -206,7 +221,7 @@ header {
 }
 
 .gallery-link img:hover {
-    transform: rotateX(10deg) rotateY(10deg);
+    transform: scale(1.05);
 }
         
 

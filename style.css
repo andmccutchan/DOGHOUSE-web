@@ -92,15 +92,29 @@ header {
     flex: 1;
     font-family: 'Impact Label Reversed', sans-serif;
 }
+    .left h2 {
+        text-align: center;
+    }
+
     .left .date, h2 {
         font-family: 'Impact Label', sans-serif;
         margin-bottom: 20px;
     }
 
+    .left a {
+        text-decoration: none;
+        color: black;
+    }
+
     .left .show-box {
-        text-align: center;
         background-color: rgba(211, 211, 211, 0.5);
         padding: 5px 10px;
+    }   
+
+    .left .shows {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
     }
 
     .left .show-box li {
@@ -118,17 +132,23 @@ header {
 .right {
     flex: 1;
 }
-    .circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 500px;  
-        height: 500px; 
-        background: linear-gradient(#FFAA33, #FF5F1F);
-        border-radius: 50%;
-        z-index: -1;
-        overflow: hidden;
-    }
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;  
+    height: 600px; 
+    background: linear-gradient(#FFAA33, #FF5F1F);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+    transition: transform 0.3s;
+}
+
+.circle:hover {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+}
 
         .circle button {
             width: 30%;

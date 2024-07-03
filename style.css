@@ -35,7 +35,9 @@ header {
     z-index: 999;
     margin-bottom: 4rem;
     display: flex;
-    justify-content: center; /* Center items horizontally within the header */
+    justify-content: space-between; /* Center items horizontally within the header */
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo-container {
@@ -51,45 +53,75 @@ header {
 }
   
 
-    nav {
-        width: 70%;
+nav {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+    .nav-links {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
-        .nav-links {
+        .nav-links ul {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            margin: 0 auto;
+            list-style: none; 
+            padding: 0;
+            margin: 0; 
         }
 
         .nav-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-decoration: none;
             font-size: 1.8rem;
             color: black;
             transition: all 0.1s ease-in-out;
         }
 
-        .nav-links a:hover {
-            transform: scale(1.2);
-        }
+            .nav-links a:hover {
+                transform: scale(1.2);
+            }
 
-        .nav-links li {
-            position: relative;
-            padding: 20px 3rem;
-        }
-
-        .nav-links li:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
-            border-right: 1px solid #E7E7E7;
-        }
+        /* .nav-links li {
+            padding: 20px 2em;
+        } */
 
 
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+}            
 /* ----------------------------------------- */
 /* BODY STRUCTURE */
 .column {
@@ -113,6 +145,7 @@ header {
         text-decoration: none;
         color: black;
         transition: all 0.2s;
+        padding: 10px;
     }
 
         .left a:hover {

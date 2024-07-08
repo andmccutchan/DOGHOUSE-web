@@ -1,0 +1,14 @@
+@import url('/resources/background-pattern.css');
+@import url('/resources/impact-label-font-face.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 25px;
+    font-family: 'Impact Label', sans-serif;
+    font-size: 1.3rem;
+}

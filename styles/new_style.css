@@ -1,0 +1,137 @@
+@import url('/resources/impact-label-font-face.css');
+@import url('/resources/background-pattern.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Impact Label', sans-serif;
+    font-size: 1.3rem;
+    height: 100vh;
+    background-image: url('/resources/background-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#000 40%, transparent 100%);
+    width: 100%;
+    z-index: 1000;
+}
+
+    .link-icons ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-icons li {
+        list-style-type: none;
+        padding: 5px;
+    }
+
+    .link-icons a {
+        color: white;
+    }
+
+    .nav-containers {
+        width: 100%;
+    }
+
+        .nav-containers ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-containers li {
+            padding: 10px 20px;
+            list-style-type: none;
+        }
+
+        .nav-containers li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+    .logo-container img {
+        width: 100%;
+    }
+
+
+/* Main content */
+.blur {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 60%, transparent);
+}
+
+.content {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    margin-top: 100vh;
+}
+
+.news-container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.news-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Creates a square aspect ratio */
+    overflow: hidden;
+}
+
+.news-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

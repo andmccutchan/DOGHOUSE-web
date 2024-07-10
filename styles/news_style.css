@@ -1,0 +1,53 @@
+* {
+    padding: 0  ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Impact Label', sans-serif;
+    font-size: 1.3rem;
+    height: 100vh;
+    background-image: url('/resources/background-photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color: white;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the 0.5 to make it more or less transparent */
+    z-index: 1;
+}
+
+main {
+    position: relative;
+        z-index: 2;
+        color: white; /* Adjust text color as needed */
+        padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.link-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
